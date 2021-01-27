@@ -55,8 +55,7 @@
 			char szFileName[256];
 			sprintf(szFileName, "d:/ymir work/ui/game/rank/name/rank_%d.png", pCharacterInstance->GetRank());
 			
-			std::string GLOB_MPFILE_KEY_VAR = CResourceManager::Instance().GLOB_MPFILE_KEY();
-			if (CResourceManager::Instance().IsFileExist(szFileName, GLOB_MPFILE_KEY_VAR))
+			if (CResourceManager::Instance().IsFileExist(szFileName))
 			{
 				CGraphicImage * pRankImage = (CGraphicImage *)CResourceManager::Instance().GetResourcePointer(szFileName);
 				
